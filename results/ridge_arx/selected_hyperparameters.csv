@@ -1,0 +1,16 @@
+case,model_seed,selected_history,selected_alpha,selected_validation_h8_mae,selected_history_at_grid_max,selected_alpha_at_grid_max
+bestest_hydronic_heat_pump,202608011,24,10,0.55551286599903826,False,False
+bestest_hydronic_heat_pump,202608012,24,10,0.55821460506963483,False,False
+bestest_hydronic_heat_pump,202608013,16,100,0.56985713287666528,False,False
+bestest_hydronic_heat_pump,202608014,24,10,0.56013643265692159,False,False
+bestest_hydronic_heat_pump,202608015,24,10,0.55873203772864177,False,False
+multizone_office_simple_air,202608011,8,10000,0.43265234857352058,False,False
+multizone_office_simple_air,202608012,8,10000,0.43008085997624257,False,False
+multizone_office_simple_air,202608013,8,10000,0.43851181266323047,False,False
+multizone_office_simple_air,202608014,8,10000,0.43727203519027141,False,False
+multizone_office_simple_air,202608015,8,10000,0.43595806212959315,False,False
+twozone_apartment_hydronic,202608011,4,0.10000000000000001,0.45237603528609027,False,False
+twozone_apartment_hydronic,202608012,8,100000,0.45207313648156394,False,True
+twozone_apartment_hydronic,202608013,4,0.10000000000000001,0.44171422909810881,False,False
+twozone_apartment_hydronic,202608014,4,10,0.44650501506635421,False,False
+twozone_apartment_hydronic,202608015,4,1,0.44958245457011825,False,False

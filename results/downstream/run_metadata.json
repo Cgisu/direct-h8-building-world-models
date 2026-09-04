@@ -1,0 +1,22 @@
+{
+  "schema": "direct-h8-downstream-multicase-result-v2",
+  "pilot": false,
+  "protocol_file_sha256": "c94306c0826cb6a280ccce26de0302edd54d719e125083089ad15addde5faaba",
+  "protocol_canonical_sha256": "a77ad676ada052c1146a95f77e1cd7cb8608a97c71ddd676657e5bc7b60a3094",
+  "episodes": 1296,
+  "cases": [
+    "bestest_hydronic_heat_pump",
+    "twozone_apartment_hydronic",
+    "multizone_office_simple_air"
+  ],
+  "response_unseen_cases": [
+    "twozone_apartment_hydronic",
+    "multizone_office_simple_air"
+  ],
+  "wall_seconds": 11488.897811889648,
+  "device": "cpu",
+  "parallel_workers": 8,
+  "torch_version": "2.12.1+cu130",
+  "numpy_version": "1.26.4",
+  "pandas_version": "2.3.3"
+}

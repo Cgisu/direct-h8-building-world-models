@@ -1,0 +1,5 @@
+policy,analysis_role,estimand,comparison,positive_direction,estimate_percent,ci90_lower_percent,ci90_upper_percent,ci95_lower_percent,ci95_upper_percent,category,positive_seed_count,negative_seed_count
+old_2h,transport_control,A,ungated_h8 RSSM vs deterministic_wm,RSSM,-21.818263372259604,-44.969765643359914,-4.4418331988700546,-50.115331480341894,-2.454633255280017,DETERMINISTIC_WM_ADVANTAGE,0,5
+old_2h,transport_control,D,ungated_h8 RSSM vs legacy RSSM,direct_H8,16.656565158633196,8.1223272360332484,23.465736883801775,6.3320443816950123,25.017931624231466,H8_BENEFIT,5,0
+new_4h,primary,A,ungated_h8 RSSM vs deterministic_wm,RSSM,-20.210860104385219,-42.55774519275387,-5.3606635003924552,-48.31477195467324,-3.4972224118559949,DETERMINISTIC_WM_ADVANTAGE,0,5
+new_4h,primary,D,ungated_h8 RSSM vs legacy RSSM,direct_H8,15.962139749990945,6.9645663864593201,23.80440022941993,5.2202123843776223,25.112202204775279,H8_BENEFIT,5,0

@@ -1,0 +1,19 @@
+{
+  "schema": "reviewer-rc-evaluation-v1",
+  "scope": "post_outcome_supervisory_review_physical_comparator",
+  "single_completed_heldout_pass": true,
+  "readiness_file_sha256": "cde102f6399b42d899a2ff9cd1b798350c5509154eb2264183c7fb26ce824ec6",
+  "readiness_payload_sha256": "aa5fdc659d566ceed6a1575c96e1eaadd5b7ea51234caaca0030a80a0f4f72b4",
+  "publication_package_binding_payload_sha256": "571b28a9384da3ac2da929f2b6b9ddf4026d8191d69e383709b7ec4c185841d3",
+  "transport_manifest_file_sha256": "97ddbc78b4840f32ad4a7619ec459dc7d898202f29f8939bc1bc73765b782a29",
+  "fault_manifest_sha256": "b334cc8c45e2025f9cbdc9c21d17503693079f3c4cbd10aa440941869bc29072",
+  "neural_core_file_sha256": "2b22e890f4b8dc9130f5400fd1a392c9a62044dd5bc89c79977291702e6a6b49",
+  "rows": 207360,
+  "runtime": {
+    "python": "3.10.12",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "wall_seconds": 241.21789575600997,
+    "device": "cpu"
+  }
+}

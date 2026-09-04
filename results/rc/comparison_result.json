@@ -1,0 +1,125 @@
+{
+  "schema": "reviewer-rc-comparison-result-v1",
+  "scope": "post_outcome_supervisory_review_physical_comparator",
+  "confirmatory_category_assigned": false,
+  "estimand": "1 - equal_weight_MAE(neural_arm) / equal_weight_MAE(RC)",
+  "positive_favors": "neural_arm",
+  "policy_results": {
+    "old_2h": {
+      "deterministic_wm": {
+        "point": 0.3810516320981473,
+        "ci95_lower": 0.2921549540805741,
+        "ci95_upper": 0.4525235473735332,
+        "ci90_lower": 0.31026352310696365,
+        "ci90_upper": 0.44124157212059517,
+        "mean_standardized_mae_by_arm": {
+          "deterministic_wm": 0.29373143126272655,
+          "reviewer_rc_grey_box": 0.4745653215928729
+        },
+        "by_case": {
+          "bestest_hydronic_heat_pump": 0.3289727152122558,
+          "multizone_office_simple_air": 0.4039747247388402,
+          "twozone_apartment_hydronic": 0.39842601124290467
+        },
+        "by_family": {
+          "bias": 0.4531355453258157,
+          "drift": 0.3069359354135651,
+          "stuck": 0.36006380171069075
+        },
+        "by_seed": {
+          "202608011": 0.37521743006925456,
+          "202608012": 0.3916846117652032,
+          "202608013": 0.3892270003392827,
+          "202608014": 0.37074520019816715,
+          "202608015": 0.3783839181188292
+        }
+      },
+      "ungated_h8": {
+        "point": 0.24600784705101886,
+        "ci95_lower": 0.06391855080027976,
+        "ci95_upper": 0.37107818033257933,
+        "ci90_lower": 0.10115743487897969,
+        "ci90_upper": 0.3576697977306932,
+        "mean_standardized_mae_by_arm": {
+          "ungated_h8": 0.3578185285427358,
+          "reviewer_rc_grey_box": 0.4745653215928729
+        },
+        "by_case": {
+          "bestest_hydronic_heat_pump": 0.2734758538454173,
+          "multizone_office_simple_air": 0.34824620696712927,
+          "twozone_apartment_hydronic": 0.10262917623051926
+        },
+        "by_family": {
+          "bias": 0.3557346556200184,
+          "drift": 0.13068188415639714,
+          "stuck": 0.216304767081268
+        },
+        "by_seed": {
+          "202608011": 0.2502725142208496,
+          "202608012": 0.23296655444835712,
+          "202608013": 0.2829526003697538,
+          "202608014": 0.19676093201037237,
+          "202608015": 0.26708663420576206
+        }
+      }
+    },
+    "new_4h": {
+      "deterministic_wm": {
+        "point": 0.3609571535455528,
+        "ci95_lower": 0.2542528469793419,
+        "ci95_upper": 0.4443429201392014,
+        "ci90_lower": 0.2732700261178066,
+        "ci90_upper": 0.43258631566013434,
+        "mean_standardized_mae_by_arm": {
+          "deterministic_wm": 0.30763693851327195,
+          "reviewer_rc_grey_box": 0.4814026793666662
+        },
+        "by_case": {
+          "bestest_hydronic_heat_pump": 0.2588087905607831,
+          "multizone_office_simple_air": 0.41504052375110034,
+          "twozone_apartment_hydronic": 0.39337002603968296
+        },
+        "by_family": {
+          "bias": 0.4299223352045701,
+          "drift": 0.26810912125211217,
+          "stuck": 0.359928745783344
+        },
+        "by_seed": {
+          "202608011": 0.35459907655999834,
+          "202608012": 0.37633658046454144,
+          "202608013": 0.36104999158251105,
+          "202608014": 0.36120314253736263,
+          "202608015": 0.35159697658335143
+        }
+      },
+      "ungated_h8": {
+        "point": 0.2318010978415631,
+        "ci95_lower": 0.05839897791237061,
+        "ci95_upper": 0.36400425067163883,
+        "ci90_lower": 0.08823040766316108,
+        "ci90_upper": 0.3446552446431124,
+        "mean_standardized_mae_by_arm": {
+          "ungated_h8": 0.369813009785603,
+          "reviewer_rc_grey_box": 0.4814026793666662
+        },
+        "by_case": {
+          "bestest_hydronic_heat_pump": 0.18186124027223616,
+          "multizone_office_simple_air": 0.36180219176095574,
+          "twozone_apartment_hydronic": 0.11773017044280276
+        },
+        "by_family": {
+          "bias": 0.3315130950697367,
+          "drift": 0.09064630042609667,
+          "stuck": 0.2360621342155751
+        },
+        "by_seed": {
+          "202608011": 0.2413257080980945,
+          "202608012": 0.21348674813046153,
+          "202608013": 0.26381004373427486,
+          "202608014": 0.194632269813932,
+          "202608015": 0.2457507194310531
+        }
+      }
+    }
+  }
+}

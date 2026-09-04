@@ -1,0 +1,14 @@
+# Third-party notices
+
+## IBPSA Project 1 BOPTEST
+
+- Repository: https://github.com/ibpsa/project1-boptest
+- Commit: `0f8a467cb1823f005b6512937e9333c65e1e483e`
+- Recorded license name: Revised BSD-3-Clause with enhancements paragraph
+- Recorded license path: `license.md`
+- Recorded license SHA-256:
+  `4f541c48eb7fea31e3bc0cb21256af3467e5d61e0db4392ed8d9b9355e7db95a`
+
+The public simulator source, test-case models, and any bundled upstream
+resources remain under their original licenses. The study licenses do not
+override those terms.

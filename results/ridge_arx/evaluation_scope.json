@@ -1,0 +1,9 @@
+{
+  "schema": "post-outcome-strong-arx-evaluation-scope-v1",
+  "scope": "post_outcome_robustness",
+  "v3_single_heldout_pass": true,
+  "v3_is_only_completed_heldout_pass": true,
+  "global_heldout_access_was_exactly_once": false,
+  "v2_partial_first_case_access_disclosed": true,
+  "confirmatory_category_assigned": false
+}

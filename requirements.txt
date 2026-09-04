@@ -1,0 +1,11 @@
+matplotlib==3.10.9
+nfoursid==1.0.2
+numpy
+pandas
+pillow
+pytest
+requests
+scikit-learn
+scipy
+threadpoolctl
+torch

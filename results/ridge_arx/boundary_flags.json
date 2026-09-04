@@ -1,0 +1,36 @@
+{
+  "schema": "post-outcome-strong-arx-boundary-disclosure-v1",
+  "scope": "post_outcome_robustness",
+  "original_alpha_max_selected_count": 14,
+  "original_fit_count": 15,
+  "strengthened_history_max_selected_count": 0,
+  "strengthened_alpha_max_selected_count": 1,
+  "strengthened_fit_count": 15,
+  "history_grid_max": 40,
+  "alpha_grid_max": 100000.0,
+  "only_strengthened_alpha_boundary_selection": {
+    "case": "twozone_apartment_hydronic",
+    "model_seed": 202608012,
+    "history": 8,
+    "alpha": 100000.0,
+    "validation_h8_mae": 0.45207313648156394
+  },
+  "nearby_interior_candidates": [
+    {
+      "history": 8,
+      "alpha": 10000.0,
+      "validation_h8_mae": 0.4580097480786896,
+      "absolute_mae_above_selected": 0.005936611597125663,
+      "relative_mae_above_selected": 0.01313197161709212
+    },
+    {
+      "history": 4,
+      "alpha": 10000.0,
+      "validation_h8_mae": 0.4529344053344332,
+      "absolute_mae_above_selected": 0.0008612688528692458,
+      "relative_mae_above_selected": 0.0019051537978398425
+    }
+  ],
+  "grid_extended_after_outcome": false,
+  "interpretation": "one of fifteen strengthened fits remains alpha-boundary selected; nearby interior candidates are close, so no further post hoc grid extension is performed"
+}

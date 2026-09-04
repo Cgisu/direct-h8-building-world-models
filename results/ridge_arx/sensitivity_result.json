@@ -1,0 +1,119 @@
+{
+  "schema": "post-outcome-strong-arx-neural-sensitivity-v1",
+  "scope": "post_outcome_descriptive_sensitivity",
+  "post_outcome": true,
+  "confirmatory_category_assigned": false,
+  "primary_horizon_steps": 8,
+  "families": [
+    "bias",
+    "drift",
+    "stuck"
+  ],
+  "cases": [
+    "bestest_hydronic_heat_pump",
+    "multizone_office_simple_air",
+    "twozone_apartment_hydronic"
+  ],
+  "model_seeds": [
+    202608011,
+    202608012,
+    202608013,
+    202608014,
+    202608015
+  ],
+  "estimand": "1 - equal_weight_MAE(deterministic_wm) / equal_weight_MAE(strengthened_ridge_arx)",
+  "positive_favors": "deterministic_wm",
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 202608029,
+    "generator": "numpy.random.PCG64",
+    "hierarchy": "case/model_seed/window_within_case",
+    "paired_across_arms_and_policies": true
+  },
+  "policy_results": {
+    "old_2h": {
+      "point": 0.34835649648607225,
+      "ci95_lower": 0.2277030542661207,
+      "ci95_upper": 0.44325565864374084,
+      "ci90_lower": 0.25108426502667996,
+      "ci90_upper": 0.4307186240152588,
+      "inference_scope": "post_outcome_descriptive_sensitivity",
+      "confirmatory_category": null,
+      "mean_standardized_mae_by_arm": {
+        "deterministic_wm": 0.29373143126272655,
+        "post_outcome_strengthened_recursive_ridge_arx": 0.4507547910457279
+      },
+      "by_case": {
+        "bestest_hydronic_heat_pump": 0.3910527908272111,
+        "multizone_office_simple_air": 0.24783088818584942,
+        "twozone_apartment_hydronic": 0.4015811475038047
+      },
+      "by_family": {
+        "bias": 0.36380869178533626,
+        "drift": 0.3218974693404434,
+        "stuck": 0.35652301508256246
+      },
+      "by_seed": {
+        "202608011": 0.33189993479780255,
+        "202608012": 0.3708999219195336,
+        "202608013": 0.36274909432421387,
+        "202608014": 0.33214611823646945,
+        "202608015": 0.3431468830341593
+      },
+      "positive_seed_count": 5,
+      "negative_seed_count": 0
+    },
+    "new_4h": {
+      "point": 0.3408230354039088,
+      "ci95_lower": 0.22815875133365862,
+      "ci95_upper": 0.43237885252519004,
+      "ci90_lower": 0.24863615679433954,
+      "ci90_upper": 0.41803338360655123,
+      "inference_scope": "post_outcome_descriptive_sensitivity",
+      "confirmatory_category": null,
+      "mean_standardized_mae_by_arm": {
+        "deterministic_wm": 0.30763693851327195,
+        "post_outcome_strengthened_recursive_ridge_arx": 0.4666985574985552
+      },
+      "by_case": {
+        "bestest_hydronic_heat_pump": 0.34518322592455164,
+        "multizone_office_simple_air": 0.2521489827816821,
+        "twozone_apartment_hydronic": 0.41945796082586684
+      },
+      "by_family": {
+        "bias": 0.35661095196501136,
+        "drift": 0.3213973702130082,
+        "stuck": 0.3424179188643034
+      },
+      "by_seed": {
+        "202608011": 0.3274658554482105,
+        "202608012": 0.35717555200404083,
+        "202608013": 0.348509016585169,
+        "202608014": 0.3374258873520626,
+        "202608015": 0.3333072599354585
+      },
+      "positive_seed_count": 5,
+      "negative_seed_count": 0
+    }
+  },
+  "transport_new_4h_minus_old_2h": {
+    "point": -0.007533461082163462,
+    "ci95_lower": -0.0718519147091558,
+    "ci95_upper": 0.056172692986444714,
+    "ci90_lower": -0.05876062447748006,
+    "ci90_upper": 0.042462838110909194
+  },
+  "original_new_4h_effect": 0.4081540134340662,
+  "claim_scope": {
+    "permitted": "sensitivity of the deterministic world-model comparison to a validation-selected strengthened linear Ridge-ARX",
+    "forbidden": [
+      "confirmatory reclassification",
+      "generic architecture superiority",
+      "physical parameter identification",
+      "observed-building generalization",
+      "closed-loop control",
+      "planning or MPC",
+      "energy, cost, or comfort benefit"
+    ]
+  }
+}

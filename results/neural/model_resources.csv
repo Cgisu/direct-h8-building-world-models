@@ -1,0 +1,4 @@
+arm,trainable_parameters,active_observation_dynamics_parameters,optimizer_updates_per_model,source_steps_per_update,direct_h8_endpoints_per_update,training_wall_seconds_available_sum,training_timed_model_count,training_untimed_model_count,training_time_status,checkpoint_bytes_mean,checkpoint_bytes_min,checkpoint_bytes_max,prediction_wall_seconds,prediction_microseconds_per_diagnostic_row,evaluation_total_wall_seconds,evaluation_peak_rss_kb
+legacy,38072,19784,400,192,0,,0,15,not_recorded_in_parent,510740.33333333331,510719,510783,110.0056545517873,434.05008898274662,418.26337074697949,2225400
+ungated_h8,38072,19784,400,192,160,,0,15,not_recorded_in_parent,510740.33333333331,510719,510783,109.95378249208443,433.84541703000485,418.26337074697949,2225400
+deterministic_wm,19789,19789,400,192,160,401.53495667898096,15,0,complete_recorded,83021,83021,83021,36.825469466974027,145.30251525794677,418.26337074697949,2225400

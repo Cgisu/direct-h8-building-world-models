@@ -1,0 +1,729 @@
+{
+  "schema": "direct-h8-multicase-rule-tuning-v2",
+  "selection": "minimum median operational score, then mean score, margin, and price quantile",
+  "outcome_scope": "clean development-validation windows only",
+  "final_window_responses_used": false,
+  "rule_grid": {
+    "margins_k": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "price_quantiles": [
+      0.25,
+      0.5,
+      0.75
+    ]
+  },
+  "score": {
+    "cost_reference_power_density_kw_m2": 0.01,
+    "cost_weight": 0.5,
+    "discomfort_weight": 0.5
+  },
+  "boptest_version": "1.0.0-dev",
+  "parallel_workers": 8,
+  "implementation": {
+    "building_fault_wm/direct_h8_downstream_multicase_v2/protocol.py": {
+      "sha256": "0a2e295e8bf0b13c151210113508a890befd87f9e76718ecac30f21343c455a3"
+    },
+    "building_fault_wm/direct_h8_downstream_multicase_v2/controllers.py": {
+      "sha256": "2b9e015cea594b6aa1ebfb37f9c0167783d9f5e36c3ab1036230daf8c62f6a81"
+    },
+    "building_fault_wm/direct_h8_downstream_multicase_v2/experiment.py": {
+      "sha256": "21b7cd6d9177282926a7374d8c94a91f258839b72d20f52fa246989c9ad78c01"
+    },
+    "building_fault_wm/direct_h8_downstream_multicase_v2/freeze.py": {
+      "sha256": "5caa324067bab557b1ae439a4f77013f0a60be5d95d8d26cdbab1e822fed53fa"
+    },
+    "building_fault_wm/direct_h8_downstream_multicase_v2/verify_report.py": {
+      "sha256": "acce8800c178f9f91138674a6174723ab30c08dee82c3c43a0ed41e06ac9a518"
+    },
+    "building_fault_wm/direct_h8_downstream_control_v1/experiment.py": {
+      "sha256": "18e27fa404b75b6731c5e76847edf527341ed58d833bb3149f1173b7a471b679"
+    },
+    "building_fault_wm/reviewer_rc_baseline_v1/model.py": {
+      "sha256": "a4b70c81ae9e3636a9ccd37b92d6e85db15881952093b189d9e8f313b927b7e3"
+    },
+    "building_fault_wm/multicase_fault_benchmark/protocol.py": {
+      "sha256": "24da8c77e6e9956093dc5a12c215237167ba0cb21fc4ef47253a4ac8457e64d0"
+    }
+  },
+  "cases": {
+    "bestest_hydronic_heat_pump": {
+      "development_windows": [
+        {
+          "day": 4,
+          "window_id": "bestest_hydronic_heat_pump:development:day004",
+          "scenario_seed": 175273518,
+          "temperature_stratum": 0
+        },
+        {
+          "day": 31,
+          "window_id": "bestest_hydronic_heat_pump:development:day031",
+          "scenario_seed": 176987829,
+          "temperature_stratum": 0
+        },
+        {
+          "day": 49,
+          "window_id": "bestest_hydronic_heat_pump:development:day049",
+          "scenario_seed": 717347092,
+          "temperature_stratum": 1
+        },
+        {
+          "day": 94,
+          "window_id": "bestest_hydronic_heat_pump:development:day094",
+          "scenario_seed": 1601609819,
+          "temperature_stratum": 2
+        },
+        {
+          "day": 103,
+          "window_id": "bestest_hydronic_heat_pump:development:day103",
+          "scenario_seed": 1147206443,
+          "temperature_stratum": 1
+        },
+        {
+          "day": 220,
+          "window_id": "bestest_hydronic_heat_pump:development:day220",
+          "scenario_seed": 387337167,
+          "temperature_stratum": 4
+        },
+        {
+          "day": 265,
+          "window_id": "bestest_hydronic_heat_pump:development:day265",
+          "scenario_seed": 918107389,
+          "temperature_stratum": 3
+        },
+        {
+          "day": 310,
+          "window_id": "bestest_hydronic_heat_pump:development:day310",
+          "scenario_seed": 1768200767,
+          "temperature_stratum": 2
+        }
+      ],
+      "price_thresholds": {
+        "0.25": 0.2383,
+        "0.5": 0.2666,
+        "0.75": 0.2666
+      },
+      "grid": [
+        {
+          "candidate_id": "margin_0p0_price_q0p25",
+          "margin_k": 0.0,
+          "price_quantile": 0.25,
+          "price_threshold": 0.2383,
+          "windows": 8,
+          "median_operational_score": -0.05525454773362581,
+          "mean_operational_score": -0.054067833217073244,
+          "improved_windows": 6,
+          "action_minus_fraction": 0.7638888888888888,
+          "action_zero_fraction": 0.0,
+          "action_plus_fraction": 0.2361111111111111
+        },
+        {
+          "candidate_id": "margin_0p0_price_q0p5",
+          "margin_k": 0.0,
+          "price_quantile": 0.5,
+          "price_threshold": 0.2666,
+          "windows": 8,
+          "median_operational_score": -0.04117677389252669,
+          "mean_operational_score": -0.036514875824110005,
+          "improved_windows": 5,
+          "action_minus_fraction": 0.625,
+          "action_zero_fraction": 0.16666666666666669,
+          "action_plus_fraction": 0.20833333333333331
+        },
+        {
+          "candidate_id": "margin_0p0_price_q0p75",
+          "margin_k": 0.0,
+          "price_quantile": 0.75,
+          "price_threshold": 0.2666,
+          "windows": 8,
+          "median_operational_score": -0.04117677389252669,
+          "mean_operational_score": -0.036514875824110005,
+          "improved_windows": 5,
+          "action_minus_fraction": 0.625,
+          "action_zero_fraction": 0.16666666666666669,
+          "action_plus_fraction": 0.20833333333333331
+        },
+        {
+          "candidate_id": "margin_0p5_price_q0p25",
+          "margin_k": 0.5,
+          "price_quantile": 0.25,
+          "price_threshold": 0.2383,
+          "windows": 8,
+          "median_operational_score": -0.059291430869172115,
+          "mean_operational_score": -0.05492797859273463,
+          "improved_windows": 6,
+          "action_minus_fraction": 0.7361111111111112,
+          "action_zero_fraction": 0.0,
+          "action_plus_fraction": 0.26388888888888884
+        },
+        {
+          "candidate_id": "margin_0p5_price_q0p5",
+          "margin_k": 0.5,
+          "price_quantile": 0.5,
+          "price_threshold": 0.2666,
+          "windows": 8,
+          "median_operational_score": -0.047155804862307735,
+          "mean_operational_score": -0.046241462993946124,
+          "improved_windows": 6,
+          "action_minus_fraction": 0.5833333333333333,
+          "action_zero_fraction": 0.1388888888888889,
+          "action_plus_fraction": 0.2777777777777778
+        },
+        {
+          "candidate_id": "margin_0p5_price_q0p75",
+          "margin_k": 0.5,
+          "price_quantile": 0.75,
+          "price_threshold": 0.2666,
+          "windows": 8,
+          "median_operational_score": -0.047155804862307735,
+          "mean_operational_score": -0.046241462993946124,
+          "improved_windows": 6,
+          "action_minus_fraction": 0.5833333333333333,
+          "action_zero_fraction": 0.1388888888888889,
+          "action_plus_fraction": 0.2777777777777778
+        },
+        {
+          "candidate_id": "margin_1p0_price_q0p25",
+          "margin_k": 1.0,
+          "price_quantile": 0.25,
+          "price_threshold": 0.2383,
+          "windows": 8,
+          "median_operational_score": 8.678231129822297e-08,
+          "mean_operational_score": -0.024814877022865008,
+          "improved_windows": 3,
+          "action_minus_fraction": 0.611111111111111,
+          "action_zero_fraction": 0.0,
+          "action_plus_fraction": 0.38888888888888884
+        },
+        {
+          "candidate_id": "margin_1p0_price_q0p5",
+          "margin_k": 1.0,
+          "price_quantile": 0.5,
+          "price_threshold": 0.2666,
+          "windows": 8,
+          "median_operational_score": 1.3452676569577302e-07,
+          "mean_operational_score": -0.01059872079533182,
+          "improved_windows": 3,
+          "action_minus_fraction": 0.4861111111111111,
+          "action_zero_fraction": 0.09722222222222222,
+          "action_plus_fraction": 0.41666666666666663
+        },
+        {
+          "candidate_id": "margin_1p0_price_q0p75",
+          "margin_k": 1.0,
+          "price_quantile": 0.75,
+          "price_threshold": 0.2666,
+          "windows": 8,
+          "median_operational_score": 1.3452676569577302e-07,
+          "mean_operational_score": -0.01059872079533182,
+          "improved_windows": 3,
+          "action_minus_fraction": 0.4861111111111111,
+          "action_zero_fraction": 0.09722222222222222,
+          "action_plus_fraction": 0.41666666666666663
+        }
+      ],
+      "selected": {
+        "candidate_id": "margin_0p5_price_q0p25",
+        "margin_k": 0.5,
+        "price_quantile": 0.25,
+        "price_threshold": 0.2383,
+        "windows": 8,
+        "median_operational_score": -0.059291430869172115,
+        "mean_operational_score": -0.05492797859273463,
+        "improved_windows": 6,
+        "action_minus_fraction": 0.7361111111111112,
+        "action_zero_fraction": 0.0,
+        "action_plus_fraction": 0.26388888888888884
+      },
+      "competence_gate": {
+        "finite": true,
+        "median_score_not_above_neutral": true,
+        "wins_at_least_half_of_windows": true,
+        "uses_at_least_two_action_levels": true,
+        "not_more_than_95_percent_one_action": true,
+        "passed": true
+      },
+      "inputs": {
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/bestest_hydronic_heat_pump/day004_validation_seed175273518.csv": {
+          "sha256": "97a793ab8f80a5d1093a8fbba8bd32602953f78e329af0dfd617cbe3e4fe0978"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/bestest_hydronic_heat_pump/day031_validation_seed176987829.csv": {
+          "sha256": "02db5098baa7c5c3abf07a9bf09f1167332be0b0b2f2998d2538d524f21f494a"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/bestest_hydronic_heat_pump/day049_validation_seed717347092.csv": {
+          "sha256": "710cb3fdce849419ae5ca4b6f666f5bdf8137c73cc18801e51dcadbdaa02f202"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/bestest_hydronic_heat_pump/day094_validation_seed1601609819.csv": {
+          "sha256": "948f29307694a1f29f712e4fbdc54e46dfe885076f18eae77f54963a724765e8"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/bestest_hydronic_heat_pump/day103_validation_seed1147206443.csv": {
+          "sha256": "ddd08994e74e9ba93f64cd5d15c3119b4fa888e8a64a7ae32d796d8b1875773e"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/bestest_hydronic_heat_pump/day220_validation_seed387337167.csv": {
+          "sha256": "fa5fdc6d08a262cb09f31b3c32df613a04691f4e03813bbc44820a5b6527beeb"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/bestest_hydronic_heat_pump/day265_validation_seed918107389.csv": {
+          "sha256": "d3c2db45c51bc555d1fc7efe3261661171d5aa9b01e571132af7369c7ff61e40"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/bestest_hydronic_heat_pump/day310_validation_seed1768200767.csv": {
+          "sha256": "8a5f6ce042cfebfd06f6df4c557ba7d6dc84e4f431faf103c6d55aa4baace8cd"
+        }
+      }
+    },
+    "twozone_apartment_hydronic": {
+      "development_windows": [
+        {
+          "day": 58,
+          "window_id": "twozone_apartment_hydronic:development:day058",
+          "scenario_seed": 2071068280,
+          "temperature_stratum": 1
+        },
+        {
+          "day": 76,
+          "window_id": "twozone_apartment_hydronic:development:day076",
+          "scenario_seed": 997372868,
+          "temperature_stratum": 1
+        },
+        {
+          "day": 112,
+          "window_id": "twozone_apartment_hydronic:development:day112",
+          "scenario_seed": 1539177590,
+          "temperature_stratum": 2
+        },
+        {
+          "day": 121,
+          "window_id": "twozone_apartment_hydronic:development:day121",
+          "scenario_seed": 1976152582,
+          "temperature_stratum": 2
+        },
+        {
+          "day": 157,
+          "window_id": "twozone_apartment_hydronic:development:day157",
+          "scenario_seed": 571973793,
+          "temperature_stratum": 3
+        },
+        {
+          "day": 193,
+          "window_id": "twozone_apartment_hydronic:development:day193",
+          "scenario_seed": 2074974522,
+          "temperature_stratum": 4
+        },
+        {
+          "day": 328,
+          "window_id": "twozone_apartment_hydronic:development:day328",
+          "scenario_seed": 103315373,
+          "temperature_stratum": 0
+        },
+        {
+          "day": 355,
+          "window_id": "twozone_apartment_hydronic:development:day355",
+          "scenario_seed": 127312315,
+          "temperature_stratum": 0
+        }
+      ],
+      "price_thresholds": {
+        "0.25": 0.19,
+        "0.5": 0.22,
+        "0.75": 0.22
+      },
+      "grid": [
+        {
+          "candidate_id": "margin_0p0_price_q0p25",
+          "margin_k": 0.0,
+          "price_quantile": 0.25,
+          "price_threshold": 0.19,
+          "windows": 8,
+          "median_operational_score": 0.04702778717061497,
+          "mean_operational_score": 0.025183429151607654,
+          "improved_windows": 3,
+          "action_minus_fraction": 0.8749999999999999,
+          "action_zero_fraction": 0.0,
+          "action_plus_fraction": 0.12499999999999999
+        },
+        {
+          "candidate_id": "margin_0p0_price_q0p5",
+          "margin_k": 0.0,
+          "price_quantile": 0.5,
+          "price_threshold": 0.22,
+          "windows": 8,
+          "median_operational_score": 0.0037532154636389075,
+          "mean_operational_score": 0.010834846365796787,
+          "improved_windows": 3,
+          "action_minus_fraction": 0.5416666666666666,
+          "action_zero_fraction": 0.375,
+          "action_plus_fraction": 0.08333333333333333
+        },
+        {
+          "candidate_id": "margin_0p0_price_q0p75",
+          "margin_k": 0.0,
+          "price_quantile": 0.75,
+          "price_threshold": 0.22,
+          "windows": 8,
+          "median_operational_score": 0.0037532154636389075,
+          "mean_operational_score": 0.010834846365796787,
+          "improved_windows": 3,
+          "action_minus_fraction": 0.5416666666666666,
+          "action_zero_fraction": 0.375,
+          "action_plus_fraction": 0.08333333333333333
+        },
+        {
+          "candidate_id": "margin_0p5_price_q0p25",
+          "margin_k": 0.5,
+          "price_quantile": 0.25,
+          "price_threshold": 0.19,
+          "windows": 8,
+          "median_operational_score": 0.0034236262663136906,
+          "mean_operational_score": 0.014782563964157138,
+          "improved_windows": 3,
+          "action_minus_fraction": 0.8194444444444445,
+          "action_zero_fraction": 0.0,
+          "action_plus_fraction": 0.18055555555555555
+        },
+        {
+          "candidate_id": "margin_0p5_price_q0p5",
+          "margin_k": 0.5,
+          "price_quantile": 0.5,
+          "price_threshold": 0.22,
+          "windows": 8,
+          "median_operational_score": -0.029498825100404018,
+          "mean_operational_score": -0.004974562463929341,
+          "improved_windows": 4,
+          "action_minus_fraction": 0.5277777777777778,
+          "action_zero_fraction": 0.36111111111111116,
+          "action_plus_fraction": 0.1111111111111111
+        },
+        {
+          "candidate_id": "margin_0p5_price_q0p75",
+          "margin_k": 0.5,
+          "price_quantile": 0.75,
+          "price_threshold": 0.22,
+          "windows": 8,
+          "median_operational_score": -0.029498825100404018,
+          "mean_operational_score": -0.004974562463929341,
+          "improved_windows": 4,
+          "action_minus_fraction": 0.5277777777777778,
+          "action_zero_fraction": 0.36111111111111116,
+          "action_plus_fraction": 0.1111111111111111
+        },
+        {
+          "candidate_id": "margin_1p0_price_q0p25",
+          "margin_k": 1.0,
+          "price_quantile": 0.25,
+          "price_threshold": 0.19,
+          "windows": 8,
+          "median_operational_score": -0.024389339262112886,
+          "mean_operational_score": -0.0036926910898150735,
+          "improved_windows": 4,
+          "action_minus_fraction": 0.7222222222222222,
+          "action_zero_fraction": 0.0,
+          "action_plus_fraction": 0.2777777777777778
+        },
+        {
+          "candidate_id": "margin_1p0_price_q0p5",
+          "margin_k": 1.0,
+          "price_quantile": 0.5,
+          "price_threshold": 0.22,
+          "windows": 8,
+          "median_operational_score": -0.011453946596013651,
+          "mean_operational_score": 0.001900770806814148,
+          "improved_windows": 4,
+          "action_minus_fraction": 0.5138888888888888,
+          "action_zero_fraction": 0.2777777777777778,
+          "action_plus_fraction": 0.20833333333333334
+        },
+        {
+          "candidate_id": "margin_1p0_price_q0p75",
+          "margin_k": 1.0,
+          "price_quantile": 0.75,
+          "price_threshold": 0.22,
+          "windows": 8,
+          "median_operational_score": -0.011453946596013651,
+          "mean_operational_score": 0.001900770806814148,
+          "improved_windows": 4,
+          "action_minus_fraction": 0.5138888888888888,
+          "action_zero_fraction": 0.2777777777777778,
+          "action_plus_fraction": 0.20833333333333334
+        }
+      ],
+      "selected": {
+        "candidate_id": "margin_0p5_price_q0p5",
+        "margin_k": 0.5,
+        "price_quantile": 0.5,
+        "price_threshold": 0.22,
+        "windows": 8,
+        "median_operational_score": -0.029498825100404018,
+        "mean_operational_score": -0.004974562463929341,
+        "improved_windows": 4,
+        "action_minus_fraction": 0.5277777777777778,
+        "action_zero_fraction": 0.36111111111111116,
+        "action_plus_fraction": 0.1111111111111111
+      },
+      "competence_gate": {
+        "finite": true,
+        "median_score_not_above_neutral": true,
+        "wins_at_least_half_of_windows": true,
+        "uses_at_least_two_action_levels": true,
+        "not_more_than_95_percent_one_action": true,
+        "passed": true
+      },
+      "inputs": {
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/twozone_apartment_hydronic/day058_validation_seed2071068280.csv": {
+          "sha256": "013f1a790026456ecb139eb149fb30e3a176f26e1c348adff3d83e2ac494a879"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/twozone_apartment_hydronic/day076_validation_seed997372868.csv": {
+          "sha256": "f96ebf17e8caf61be9775d9105f86f7f6600b8587b6c469d9fd7e1f34cbc27e0"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/twozone_apartment_hydronic/day112_validation_seed1539177590.csv": {
+          "sha256": "17fb1b6eff72e93114bcc328f5585b5307c5c26780270e6c1cec9de40d3f9d7b"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/twozone_apartment_hydronic/day121_validation_seed1976152582.csv": {
+          "sha256": "d01282cd5c61fc4146507f12db02862c4a448fa39e000e99c998cab82eef9eb9"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/twozone_apartment_hydronic/day157_validation_seed571973793.csv": {
+          "sha256": "0e139067e05fcdbc122d9d8c6a907652e5539c4771c4307beb16f53b25d395b5"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/twozone_apartment_hydronic/day193_validation_seed2074974522.csv": {
+          "sha256": "fc663a27c34dd70b94d08fc878792f1b692eea5af867760fcc4e355a964f3ed2"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/twozone_apartment_hydronic/day328_validation_seed103315373.csv": {
+          "sha256": "cdf1b22067f5874d31482cf5903eda03bade3532ce7e2b03f64e83bb877e25f3"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/twozone_apartment_hydronic/day355_validation_seed127312315.csv": {
+          "sha256": "eb6d9b361198d2c6e472cbf0ab64c388f3d4772ba27b7a62b46aa8a98288725f"
+        }
+      }
+    },
+    "multizone_office_simple_air": {
+      "development_windows": [
+        {
+          "day": 49,
+          "window_id": "multizone_office_simple_air:development:day049",
+          "scenario_seed": 1205782921,
+          "temperature_stratum": 0
+        },
+        {
+          "day": 76,
+          "window_id": "multizone_office_simple_air:development:day076",
+          "scenario_seed": 1843108576,
+          "temperature_stratum": 1
+        },
+        {
+          "day": 148,
+          "window_id": "multizone_office_simple_air:development:day148",
+          "scenario_seed": 230150522,
+          "temperature_stratum": 3
+        },
+        {
+          "day": 247,
+          "window_id": "multizone_office_simple_air:development:day247",
+          "scenario_seed": 331548741,
+          "temperature_stratum": 4
+        },
+        {
+          "day": 274,
+          "window_id": "multizone_office_simple_air:development:day274",
+          "scenario_seed": 474795460,
+          "temperature_stratum": 2
+        },
+        {
+          "day": 310,
+          "window_id": "multizone_office_simple_air:development:day310",
+          "scenario_seed": 2140813280,
+          "temperature_stratum": 2
+        },
+        {
+          "day": 328,
+          "window_id": "multizone_office_simple_air:development:day328",
+          "scenario_seed": 428214659,
+          "temperature_stratum": 0
+        },
+        {
+          "day": 337,
+          "window_id": "multizone_office_simple_air:development:day337",
+          "scenario_seed": 548853089,
+          "temperature_stratum": 1
+        }
+      ],
+      "price_thresholds": {
+        "0.25": 0.05871,
+        "0.5": 0.06906,
+        "0.75": 0.1599
+      },
+      "grid": [
+        {
+          "candidate_id": "margin_0p0_price_q0p25",
+          "margin_k": 0.0,
+          "price_quantile": 0.25,
+          "price_threshold": 0.05871,
+          "windows": 8,
+          "median_operational_score": 8.014463459077015e-08,
+          "mean_operational_score": 0.0005098479118918705,
+          "improved_windows": 3,
+          "action_minus_fraction": 0.013888888888888888,
+          "action_zero_fraction": 0.013888888888888888,
+          "action_plus_fraction": 0.9722222222222222
+        },
+        {
+          "candidate_id": "margin_0p0_price_q0p5",
+          "margin_k": 0.0,
+          "price_quantile": 0.5,
+          "price_threshold": 0.06906,
+          "windows": 8,
+          "median_operational_score": -1.2159574413030941e-08,
+          "mean_operational_score": 0.0005101285892454622,
+          "improved_windows": 4,
+          "action_minus_fraction": 0.013888888888888888,
+          "action_zero_fraction": 0.41666666666666663,
+          "action_plus_fraction": 0.5694444444444444
+        },
+        {
+          "candidate_id": "margin_0p0_price_q0p75",
+          "margin_k": 0.0,
+          "price_quantile": 0.75,
+          "price_threshold": 0.1599,
+          "windows": 8,
+          "median_operational_score": -1.95579320500655e-08,
+          "mean_operational_score": -0.0007467771064723753,
+          "improved_windows": 4,
+          "action_minus_fraction": 0.0,
+          "action_zero_fraction": 0.7777777777777778,
+          "action_plus_fraction": 0.22222222222222227
+        },
+        {
+          "candidate_id": "margin_0p5_price_q0p25",
+          "margin_k": 0.5,
+          "price_quantile": 0.25,
+          "price_threshold": 0.05871,
+          "windows": 8,
+          "median_operational_score": -1.4820330884163344e-08,
+          "mean_operational_score": -6.945533717411269e-05,
+          "improved_windows": 4,
+          "action_minus_fraction": 0.027777777777777776,
+          "action_zero_fraction": 0.013888888888888888,
+          "action_plus_fraction": 0.9583333333333333
+        },
+        {
+          "candidate_id": "margin_0p5_price_q0p5",
+          "margin_k": 0.5,
+          "price_quantile": 0.5,
+          "price_threshold": 0.06906,
+          "windows": 8,
+          "median_operational_score": -1.554964190672205e-07,
+          "mean_operational_score": -6.929406490929875e-05,
+          "improved_windows": 5,
+          "action_minus_fraction": 0.027777777777777776,
+          "action_zero_fraction": 0.41666666666666663,
+          "action_plus_fraction": 0.5555555555555555
+        },
+        {
+          "candidate_id": "margin_0p5_price_q0p75",
+          "margin_k": 0.5,
+          "price_quantile": 0.75,
+          "price_threshold": 0.1599,
+          "windows": 8,
+          "median_operational_score": 2.939298846550839e-08,
+          "mean_operational_score": 0.00030148257109597986,
+          "improved_windows": 3,
+          "action_minus_fraction": 0.013888888888888888,
+          "action_zero_fraction": 0.7638888888888888,
+          "action_plus_fraction": 0.22222222222222227
+        },
+        {
+          "candidate_id": "margin_1p0_price_q0p25",
+          "margin_k": 1.0,
+          "price_quantile": 0.25,
+          "price_threshold": 0.05871,
+          "windows": 8,
+          "median_operational_score": 1.4347785526575596e-07,
+          "mean_operational_score": 0.004564889866739395,
+          "improved_windows": 2,
+          "action_minus_fraction": 0.06944444444444445,
+          "action_zero_fraction": 0.013888888888888888,
+          "action_plus_fraction": 0.9166666666666666
+        },
+        {
+          "candidate_id": "margin_1p0_price_q0p5",
+          "margin_k": 1.0,
+          "price_quantile": 0.5,
+          "price_threshold": 0.06906,
+          "windows": 8,
+          "median_operational_score": 8.646491122932705e-08,
+          "mean_operational_score": 0.004565030179395421,
+          "improved_windows": 3,
+          "action_minus_fraction": 0.06944444444444445,
+          "action_zero_fraction": 0.4027777777777778,
+          "action_plus_fraction": 0.5277777777777777
+        },
+        {
+          "candidate_id": "margin_1p0_price_q0p75",
+          "margin_k": 1.0,
+          "price_quantile": 0.75,
+          "price_threshold": 0.1599,
+          "windows": 8,
+          "median_operational_score": 7.380555731579779e-08,
+          "mean_operational_score": 0.004619275401675024,
+          "improved_windows": 2,
+          "action_minus_fraction": 0.06944444444444445,
+          "action_zero_fraction": 0.75,
+          "action_plus_fraction": 0.18055555555555558
+        }
+      ],
+      "selected": {
+        "candidate_id": "margin_0p5_price_q0p5",
+        "margin_k": 0.5,
+        "price_quantile": 0.5,
+        "price_threshold": 0.06906,
+        "windows": 8,
+        "median_operational_score": -1.554964190672205e-07,
+        "mean_operational_score": -6.929406490929875e-05,
+        "improved_windows": 5,
+        "action_minus_fraction": 0.027777777777777776,
+        "action_zero_fraction": 0.41666666666666663,
+        "action_plus_fraction": 0.5555555555555555
+      },
+      "competence_gate": {
+        "finite": true,
+        "median_score_not_above_neutral": true,
+        "wins_at_least_half_of_windows": true,
+        "uses_at_least_two_action_levels": true,
+        "not_more_than_95_percent_one_action": true,
+        "passed": true
+      },
+      "inputs": {
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/multizone_office_simple_air/day049_validation_seed1205782921.csv": {
+          "sha256": "903481a6a0d1c80b97c37245541f5c06c574f51248bc697bd1636e0b9ff7da57"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/multizone_office_simple_air/day076_validation_seed1843108576.csv": {
+          "sha256": "34b55ad0b9834cd741760c320d7376733d38fff9550183184ed9805ab2953ad1"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/multizone_office_simple_air/day148_validation_seed230150522.csv": {
+          "sha256": "b9d0a2e789b335a6c7df6533d16cc5dcf596764ea1210d37a543fec433ad7838"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/multizone_office_simple_air/day247_validation_seed331548741.csv": {
+          "sha256": "3e72288d211ea739ad755445d4f2d88acdd78f8effe5534ef3831a29677d8add"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/multizone_office_simple_air/day274_validation_seed474795460.csv": {
+          "sha256": "91c78e682dcc5dd78214c74f25acd5205d21ee31affb63fcafe9c130df83d206"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/multizone_office_simple_air/day310_validation_seed2140813280.csv": {
+          "sha256": "46749ec6631d5e12cc60b1e7cfbb08b646fbfc7886e9249857d10f38831e5b15"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/multizone_office_simple_air/day328_validation_seed428214659.csv": {
+          "sha256": "85499c3005e27d22d00ba6bfcbb524e8cc078c0a451c95b1f1b8a1c06ea3a3e0"
+        },
+        "building_fault_wm/multicase_fault_benchmark/data_v4/development_raw/multizone_office_simple_air/day337_validation_seed548853089.csv": {
+          "sha256": "6cffed5974e68a0143c40446486be391ffd1632004567c05421b89ec0a7ad314"
+        }
+      }
+    }
+  },
+  "all_competence_gates_passed": true,
+  "wall_seconds": 2147.0207529067993,
+  "rows_file": {
+    "path": "tuning_rows.csv",
+    "sha256": "2333295115d460da6a0dfeca21e07b8b42fa5915c06560dfe16e7987bf29a18b"
+  },
+  "payload_sha256": "3338dc20ba6011bc2a1fb7119901f93f25ae749f88b32702db03432e4293c2d9"
+}

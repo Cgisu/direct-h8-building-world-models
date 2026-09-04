@@ -1,0 +1,195 @@
+{
+  "schema": "reviewer-rc-grey-box-model-v1",
+  "case": "multizone_office_simple_air",
+  "topology": "2r2c",
+  "equipment_ridge_alpha": 10.0,
+  "innovation_clip_sigma": 5.0,
+  "thermal_coefficients": {
+    "a_oa": 1.0003174944679119e-05,
+    "a_zm": 0.006549607917852155,
+    "a_mz": 7.639640828490609e-05,
+    "a_mo": 0.0,
+    "hvac_gain_k_per_kw_step": 1.0013371253257698e-05,
+    "solar_gain_k_per_w_m2_step": 6.292501009013128e-05,
+    "constant_heat_flow_k_per_step": -0.0012100374702484376
+  },
+  "physical_diagnostics": {
+    "zone_capacity_j_per_k": 89879819417.18167,
+    "outdoor_resistance_k_per_w": 0.0010010193072334502,
+    "mass_capacity_j_per_k": 7705566140158.478,
+    "mass_to_zone_capacity_ratio": 85.73188275326531,
+    "zone_mass_resistance_k_per_w": 1.528850486754241e-06,
+    "mass_outdoor_resistance_k_per_w": null,
+    "effective_solar_aperture_m2": 6284.098381917038,
+    "constant_heat_flow_w": -120842.16590439212
+  },
+  "parameter_boundary_diagnostics": {
+    "boundary_relative_span_tolerance": 0.001,
+    "equipment_regularization_endpoint": "interior",
+    "outdoor_conductance_near_bound": true,
+    "zone_coefficient_sum_near_upper_bound": false,
+    "mass_capacity_ratio_near_bound": false,
+    "hvac_gain_near_bound": true,
+    "solar_aperture_near_bound": false,
+    "constant_heat_flow_near_bound": false,
+    "physical_boundary_flag_count": 2
+  },
+  "equipment_coefficients": [
+    [
+      -0.5615842286099268,
+      -0.5640416368759876,
+      -0.7283735716898361
+    ],
+    [
+      0.2875967588126696,
+      0.25650872589291857,
+      0.3482292590446237
+    ],
+    [
+      0.7859548463206408,
+      -0.021638164410879526,
+      0.01733058908309163
+    ],
+    [
+      0.02295064937769442,
+      0.72266321943935,
+      -0.22548407171120122
+    ],
+    [
+      0.004353913018585598,
+      0.0012077956730417246,
+      0.2701612080270018
+    ],
+    [
+      -0.11906738382567847,
+      -0.12802558450693344,
+      -0.18894604917934196
+    ],
+    [
+      0.03284373611468816,
+      0.02933066829320011,
+      0.04035604584425854
+    ],
+    [
+      -0.03340338461786049,
+      -0.03582452670659386,
+      -0.0793256040670089
+    ],
+    [
+      0.08530525289283546,
+      0.15923709576225456,
+      0.13893779917170881
+    ],
+    [
+      -0.08530525289292261,
+      -0.15923709576235429,
+      -0.13893779917182167
+    ],
+    [
+      -0.04800108672752565,
+      -0.03623989270739558,
+      -0.09741319248493574
+    ],
+    [
+      0.2310852876047188,
+      0.2379462769718249,
+      0.3204047068315068
+    ],
+    [
+      0.5707632866701513,
+      0.5504546478637651,
+      0.7512808189934631
+    ],
+    [
+      -0.012226194726336006,
+      -0.010592650915972337,
+      -0.009873504705581546
+    ]
+  ],
+  "equipment_lower_standardized": [
+    -1.1431069310648612,
+    -1.3124864165584946,
+    -2.9098337033267745
+  ],
+  "equipment_upper_standardized": [
+    8.260363139177342,
+    2.9160341263155476,
+    15.376894711144164
+  ],
+  "process_covariance": [
+    [
+      0.022689559963804288,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0011344779981902144,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.20853736094980957,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.08231219438311198,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.9017554108229988
+    ]
+  ],
+  "measurement_covariance": [
+    [
+      0.0004,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0004,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0004,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0004
+    ]
+  ],
+  "fit_diagnostics": {
+    "least_squares_success": 1,
+    "least_squares_status": 2,
+    "least_squares_function_evaluations": 61,
+    "least_squares_multistart_count": 9,
+    "least_squares_selected_start": 2,
+    "least_squares_successful_starts": 9,
+    "fit_temperature_mae_k": 0.41979469404501857,
+    "fit_temperature_rmse_k": 0.5503841760228656,
+    "fit_equipment_standardized_mae": 0.2052417400170861,
+    "fit_equipment_standardized_rmse": 0.6305037578941468
+  },
+  "active_coefficients": 48
+}

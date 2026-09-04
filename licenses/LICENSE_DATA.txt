@@ -1,0 +1,15 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+The original trajectory tables, derived metadata, result tables, and figures
+created for this study are licensed under the Creative Commons Attribution 4.0
+International license.
+
+License summary:
+https://creativecommons.org/licenses/by/4.0/
+
+Legal code:
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+Attribution should identify the study title, authors, release version, and
+repository DOI. This declaration does not relicense third-party BOPTEST source,
+test-case models, weather resources, or other upstream material.

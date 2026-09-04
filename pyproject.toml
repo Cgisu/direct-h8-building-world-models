@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "direct-h8-transport"
+version = "1.0.0"
+description = "Recurrent building prediction under sensor faults and action-dwell shift"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "BSD-3-Clause" }
+authors = [
+  { name = "Isaias Ghebrehiwet", email = "ighebrehiwet@uaeu.ac.ae" },
+  { name = "Nazar Zaki", email = "nzaki@uaeu.ac.ae" },
+]
+keywords = [
+  "building-energy",
+  "hvac",
+  "world-model",
+  "recurrent-state-space-model",
+  "multi-step-prediction",
+  "sensor-faults",
+  "boptest",
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: BSD License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Topic :: Scientific/Engineering",
+]
+dependencies = [
+  "matplotlib==3.10.9",
+  "nfoursid==1.0.2",
+  "numpy",
+  "pandas",
+  "pillow",
+  "requests",
+  "scikit-learn",
+  "scipy",
+  "threadpoolctl",
+  "torch",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.urls]
+Repository = "https://github.com/Cgisu/direct-h8-building-world-models"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["building_fault_wm*"]
+
+[tool.pytest.ini_options]
+testpaths = ["release_tests"]
+addopts = ["-p", "no:cacheprovider"]

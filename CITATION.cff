@@ -1,0 +1,72 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software or the frozen evidence it carries, please cite the
+  article under preferred-citation. A direct software citation may use the
+  metadata below.
+title: >-
+  Direct-H8 Transport: code and frozen evidence for multi-step supervision in
+  recurrent building world models
+abstract: >-
+  Experimental code, the frozen 72-trajectory input corpus, and sealed result
+  tables for an open-loop comparison of recurrent building prediction models
+  under synthetic sensor faults and action-dwell shift, together with a bounded
+  descriptive downstream supervisory evaluation in three public BOPTEST
+  simulator cases.
+type: software
+version: 1.0.0
+date-released: '2026-08-31'
+license: BSD-3-Clause
+repository-code: https://github.com/Cgisu/direct-h8-building-world-models
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22194729
+    description: >-
+      Archived data, checkpoints, and reproducibility evidence supporting
+      this software.
+authors:
+  - family-names: Ghebrehiwet
+    given-names: Isaias
+    email: ighebrehiwet@uaeu.ac.ae
+    affiliation: >-
+      The Center for AI and Digital Innovation, United Arab Emirates
+      University, Al Ain, United Arab Emirates
+  - family-names: Zaki
+    given-names: Nazar
+    email: nzaki@uaeu.ac.ae
+    affiliation: >-
+      The Center for AI and Digital Innovation, and Department of Computer
+      Science and Software Engineering, College of Computing and Artificial
+      Intelligence, United Arab Emirates University, Al Ain, United Arab
+      Emirates
+keywords:
+  - building energy
+  - HVAC
+  - world model
+  - recurrent state-space model
+  - multi-step prediction
+  - sensor faults
+  - BOPTEST
+  - reproducibility
+preferred-citation:
+  type: article
+  title: >-
+    Multi-Step Supervision in Recurrent Building World Models under Sensor
+    Faults and Action-Dwell Shift
+  authors:
+    - family-names: Ghebrehiwet
+      given-names: Isaias
+      email: ighebrehiwet@uaeu.ac.ae
+      affiliation: >-
+        The Center for AI and Digital Innovation, United Arab Emirates
+        University, Al Ain, United Arab Emirates
+    - family-names: Zaki
+      given-names: Nazar
+      email: nzaki@uaeu.ac.ae
+      affiliation: >-
+        The Center for AI and Digital Innovation, and Department of Computer
+        Science and Software Engineering, College of Computing and Artificial
+        Intelligence, United Arab Emirates University, Al Ain, United Arab
+        Emirates
+  notes: >-
+    Manuscript prepared for submission. No venue or article DOI is asserted
+    until acceptance.

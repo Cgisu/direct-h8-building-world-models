@@ -1,0 +1,18 @@
+name: direct-h8-transport
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - matplotlib=3.10.9
+  - numpy
+  - pandas
+  - pillow
+  - pytest
+  - requests
+  - scikit-learn
+  - scipy
+  - threadpoolctl
+  - pip
+  - pip:
+      - nfoursid==1.0.2
+      - torch
